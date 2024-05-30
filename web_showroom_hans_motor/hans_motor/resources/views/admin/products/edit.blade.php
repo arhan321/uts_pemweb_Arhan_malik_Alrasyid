@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
                 <label for="description">{{ trans('cruds.product.fields.description') }}</label>
-                <input class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" type="text" description="description" id="description" value="{{ old('description', $product->description) }}">
+                <input class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" type="text" name="description" id="description" value="{{ old('description', $product->description) }}">
                 @if($errors->has('description'))
                     <div class="invalid-feedback">
                         {{ $errors->first('description') }}
